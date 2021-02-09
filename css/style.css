@@ -1,0 +1,355 @@
+/* Global */
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    
+}
+p{
+    margin: .5rem;
+    text-align: start;
+}
+h5{
+    text-align: center;
+}
+h2{
+    color:#bd5c1c;
+    font-family: 'Sriracha', cursive;
+    font-weight: normal;
+}
+h3{
+    font-family: 'Sriracha', cursive;
+    
+}
+h4{
+    font-family: 'Sriracha', cursive;
+    color:#bd5c1c;
+    text-align: center;
+}
+/* header */
+.img-container{
+    height: 40vh;
+    background-image: url('/img/dog-4415649_1920.jpg');
+    background-position: center;
+    
+}
+.active{
+    color: #bd5c1c !important;
+}
+
+.heading-container{
+    background-color: rgba(117, 117, 117, 0.438);
+    width: 50%;
+    margin: 0 auto;
+    padding: 2%;
+    border-radius: 2rem;
+}
+.index-headline,
+h3{
+    color: rgba(255, 255, 255, 0.952);
+    text-align: center;
+
+}
+/* Navbar */
+.navbar-toggler{
+    background-color: #e48b51;
+}
+#logo{
+    font-family: 'Sriracha', cursive;
+    margin-left: 1%;
+    color: white;
+    background: rgba(192, 191, 191, 0.548);
+    padding: .5rem;
+    border-radius: 1rem;
+    border: 1px rgba(253, 253, 253, 0.246) solid;
+}
+span{
+    color: rgba(3, 3, 3, 0.993);
+}
+orange{
+    color: #e48b51;
+}
+#dirty-paw{
+    color: rgba(0, 0, 0, 0.842);
+}
+#clean-paw{
+    color: #e48b51;
+}
+.bg-light{
+    background-color:#344a5f !important;
+}
+nav a{
+    color: white !important;
+}
+nav a:hover{
+    color: #6e7b88 !important;
+}
+/* Registration form */
+form{
+    background-color: rgba(192, 191, 191, 0.548);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+/* Main */
+.services-bg{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100 */
+background: rgb(181,189,200); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(181,189,200,1) 0%, rgba(130,140,149,1) 36%, rgba(40,52,59,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
+
+    
+}
+.header-block{
+    padding: 2rem;
+    width: 20%;
+    margin: 0 auto 1rem;
+    border-radius: 2rem;
+    color: white;
+    background: rgba(48, 43, 48, 0.575);
+}
+.row{
+    --bs-gutter-x: 0rem;
+    
+}
+.small-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.first{
+    color: #344a5f;
+    margin-top: 10%;
+}
+@media(min-width:768px){
+    .first{
+        width: 64.6666%;
+    }
+}
+.second{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.appointment{
+    
+    display: table;
+    margin: 0 auto;
+
+}
+@media(min-width:576px){
+    .customer-review-section{
+        max-width: 100%;
+        margin: 0;
+        
+    }
+    .col-sm{
+        margin: 1% 1.5%;
+    }
+}
+.align{
+    text-align: center;
+}.col-4{
+    background-color: #bd5c1c;
+    width: 100%;
+}
+@media(min-width:768px){
+    .col-4{
+        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    margin-top: 10%;
+    margin-left: 6%;
+
+    }
+}
+.col-4 i{
+    color: seashell;
+}
+.col-4 a{
+    color: seashell;
+    text-decoration: none;
+    margin-left: .5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+}
+.col-4 a:hover{
+    text-decoration: underline;
+}
+.col-4 li{
+    list-style: none;
+    margin: .5rem 0;
+
+}
+.customer-review-section{
+    background-color: #e48b51;
+    padding-top: 3%;
+}
+
+.cr-head{
+    color: white;
+    background: #e48b51;
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    margin-bottom: 0%;
+}
+@media(min-width:768px){
+    .customer-review-section{
+        max-width: 100%;
+        margin: 0;
+    }
+    .col-sm{
+        margin: 1% 1.5%;
+    }
+    .w-100{
+        width: 100%;
+    }
+    
+}
+.serv-container{
+    vertical-align: baseline;
+}
+.card{
+    margin-bottom: 1rem;
+    background-color: #344a5f;
+    color: white;
+    margin: 0 auto;
+}
+
+.card-body{
+    background-color: rgb(190, 190, 190);
+    color: black;
+}
+.blockquote p{
+    margin-bottom: 1.5rem;
+}
+.blockquote-footer{
+    background-color: #344a5f;
+    color: white;
+}
+@media(min-width:768px){
+    .flex-container{
+    display: flex;
+    width: 95%;
+    }
+}
+.col{
+    margin:1% 2%;
+}
+#prices p{
+    text-align: center;
+}
+.btn-dark{
+    background-color: #e48b51;
+    border: #e48b51;
+}
+.btn-dark:hover{
+    background-color: #344a5f;
+}
+#pet-name li{
+    list-style: none;
+    text-align: center;
+}
+#pets p,
+#pets{
+    text-align: center;
+    
+}
+.col-sm{
+    margin-bottom: 1rem;
+}
+.container-fluid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+#pet-name{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.pet{
+    border: 1px solid #828282;
+    border-radius: 1rem;
+    margin: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+/* Footer */
+footer p:last-of-type{
+    margin-bottom: 1rem;
+}
+footer p:first-of-type{
+    margin-top: 1rem;
+}
+footer a.navbar-brand{
+    color: black;
+    text-align: center;
+    width: 50%;
+    
+}
+footer .row{
+    align-items: flex-end;
+}
+#mid-col{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+footer{
+    background: #344a5f;
+    color: white;
+}
+.icon-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon-container p{
+    text-align: center;
+}
+.btn-container{
+    display: flex;
+    width: inherit;
+    justify-content: center;
+
+}
+.btn{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: .5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.btn i{
+    color:white;
+    font-size: 1.5rem;
+}
+.btn-outline-primary:hover{
+    
+    background-color: #e48b51;
+    border-color: #0d6efd;
+}
+
+/* Display.js */
+
+
+
+
+
+
