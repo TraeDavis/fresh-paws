@@ -39,7 +39,7 @@ document.getElementById('mid-col').innerHTML+=`
 
     // create the pet class
     class Pets{
-        constructor(name, age, breed, gender, service, ownersName, contactNumber){
+        constructor(name, age, breed, gender, service, ownersName, contactNumber, payment){
             this.name=name;
             this.age=age;
             this.breed=breed;
@@ -47,52 +47,26 @@ document.getElementById('mid-col').innerHTML+=`
             this.service=service;
             this.ownersName=ownersName;
             this.contactNumber=contactNumber;
+            this.payment=payment;
         }
     };
 
 
     // create pets using the constuctor
-    var scooby= new Pets('Scooby', 2,'Dane','Male','Full service', 'Shaggy', '555-555-5555' );
-    var scrapy= new Pets('Scrapy', 4,'Mini-Dane','Male','Bath', 'Shaggy', '555-555-5555' );
-    var speedy= new Pets('Speedy', 10,'Mixed','Male','Nail trim', 'Bugs', '444-444-4444' );
-    var max= new Pets('Max',3,'German Sheppard','Male', 'Full Groom','Andy','123-454-7878');
-    var baxter= new Pets('Baxter',1,'Dalmation','Male','Bath','Karen','434-466-1234');
-    // console.log(scooby,scrapy,speedy,max,baxter);
-    
-   
+    var scooby= new Pets('Scooby', 2,'Dane','Male','Full service', 'Shaggy', '555-555-5555', 'cash');
+    var scrapy= new Pets('Scrapy', 4,'Mini-Dane','Male','Bath', 'Shaggy', '555-555-5555', "Visa" );
+    var speedy= new Pets('Speedy', 10,'Mixed','Male','Nail trim', 'Bugs', '444-444-4444', 'Bitcoin' );
+    var max= new Pets('Max',3,'German Sheppard','Male', 'Full Groom','Andy','123-454-7878', 'Cash');
+    var baxter= new Pets('Baxter',1,'Dalmation','Male','Bath','Karen','434-466-1234', 'Mastercard');
 
+    // push pets made using constructor to the pets array
     salon.pets.push(scooby);
     salon.pets.push(scrapy);
     salon.pets.push(speedy);
     salon.pets.push(max);
     salon.pets.push(baxter);
-
-
-
-
-
-
-        var txtName = document.getElementById('petNameTxt').value;
-        var txtAge = document.getElementById('petAgeTxt').value;
-        var txtBreed = document.getElementById('petBreedTxt').value;
-        var txtGender = document.getElementById('petGenderTxt').value;
-        var txtService = document.getElementById('petServiceTxt').value;
-        var txtOwner = document.getElementById('ownerNameTxt').value;
-        var txtPhone = document.getElementById('ownerPhoneTxt').value;
-
-function clear(){
-    txtName.value=' ';
-    txtAge.value=' ';
-    txtBreed.value=' ';
-    txtGender.value=' ';
-    txtService.value=' ';
-    txtOwner.value=' ';
-    txtPhone.value=' ';
-   };
-  
    
    // create register function
-
    function register(){
         // pull data from form
 
@@ -103,9 +77,10 @@ function clear(){
         var txtService = document.getElementById('petServiceTxt').value;
         var txtOwner = document.getElementById('ownerNameTxt').value;
         var txtPhone = document.getElementById('ownerPhoneTxt').value;
+        var txtPayment = document.getElementById('paymentTxt').value;
 
         // create generic construtor
-        var thePet = new Pets(txtName,txtAge,txtBreed,txtGender,txtService,txtOwner,txtPhone);
+        var thePet = new Pets(txtName,txtAge,txtBreed,txtGender,txtService,txtOwner,txtPhone, txtPayment);
 
         //push to pets array
         salon.pets.push(thePet);
@@ -113,6 +88,9 @@ function clear(){
         
        // run display function
         display();
+
+        //reset form
+        document.getElementById("myForm").reset();
         
    };
 
