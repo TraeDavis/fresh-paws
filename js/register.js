@@ -48,16 +48,17 @@ document.getElementById('mid-col').innerHTML+=`
             this.ownersName=ownersName;
             this.contactNumber=contactNumber;
             this.payment=payment;
+            this.price=0;
         }
     };
 
 
     // create pets using the constuctor
-    var scooby= new Pets('Scooby', 2,'Dane','Male','Full service', 'Shaggy', '555-555-5555', 'cash');
-    var scrapy= new Pets('Scrapy', 4,'Mini-Dane','Male','Bath', 'Shaggy', '555-555-5555', "Visa" );
-    var speedy= new Pets('Speedy', 10,'Mixed','Male','Nail trim', 'Bugs', '444-444-4444', 'Bitcoin' );
+    var scooby= new Pets('Scooby', 2,'Dane','Male','Full Groom', 'Shaggy', '555-555-5555', 'cash');
+    var scrapy= new Pets('Scrapy', 4,'Mini-Dane','Male','Bath, Brush, and Nail Trim', 'Shaggy', '555-555-5555', "Visa" );
+    var speedy= new Pets('Speedy', 10,'Mixed','Male','Face, Feet, Sanitary', 'Bugs', '444-444-4444', 'Bitcoin' );
     var max= new Pets('Max',3,'German Sheppard','Male', 'Full Groom','Andy','123-454-7878', 'Cash');
-    var baxter= new Pets('Baxter',1,'Dalmation','Male','Bath','Karen','434-466-1234', 'Mastercard');
+    var baxter= new Pets('Baxter',1,'Dalmation','Male','Bath, Brush, and Nail Trim','Karen','434-466-1234', 'Mastercard');
 
     // push pets made using constructor to the pets array
     salon.pets.push(scooby);
@@ -89,6 +90,7 @@ document.getElementById('mid-col').innerHTML+=`
        // run display function
         display();
 
+        
         //reset form
         document.getElementById("myForm").reset();
         
@@ -96,7 +98,18 @@ document.getElementById('mid-col').innerHTML+=`
 
 
  
-   
+   function profitCalculation(){
+       //create a variable sum and initialize the variable
+        var sum = 0;
+       //travel the salon.pets[](for)
+            for(var i=0;i<salon.pets.length;i++){
+                sum= parseInt(salon.pets[i].price) + sum;
+            }
+       // sum all the prices
+
+    // display the result on the html
+            document.getElementById('profit').innerHTML = `<p> profit: $${sum}`
+   }
   
 
 
