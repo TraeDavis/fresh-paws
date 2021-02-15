@@ -33,6 +33,9 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
@@ -48,7 +51,7 @@
   </header>
 
       
-      <main>
+      <main id="main">
           <h2 class="text-center">Registration Page</h2>
           <div class="row align-items-start">
             <div class="col-sm">
@@ -94,10 +97,24 @@
               
             </div><!--.col-sm-->
 
-            <div class="container-fluid">
+            <div style="overflow-x:auto;" class="container-fluid table-div">
               <div id="pets"></div>
               <div id="profit"></div>
-              <div id="pet-name"></div>
+              
+              <table  class="table" id="pet-name">
+                <tr>
+                  <th>Pet Name:</th>
+                  <th>Age:</th>
+                  <th>Breed:</th>
+                  <th>Gender:</th>
+                  <th>Service:</th>
+                  <th>Owner:</th>
+                  <th>Phone:</th>
+                  <th>Price:</th>
+                  <th>Payment Method:</th>
+                </tr>
+              </table>
+              
             </div><!--.container-fluid-->
 
           </div><!--.row align-items-start-->
@@ -136,10 +153,12 @@
             </div><!--.col-sm icon-container-->
           </div><!--.row-->
         </div><!--.container-->
+      </footer>
         
       
        
       <script src="js/register.js"></script>
       <script src="js/display.js"></script> 
+      <!-- <script src="test/practice1.js"></script> -->
 </body>
 </html>

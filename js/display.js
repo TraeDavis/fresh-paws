@@ -1,6 +1,6 @@
-function display(){
+function display(aPet){
     //clear the field
-    document.getElementById('pet-name').innerHTML = " ";
+    // document.getElementById('pet-name').innerHTML = " ";
 
     
 
@@ -10,39 +10,46 @@ function display(){
             <h6>Pets currently Registered:</h6>`;
             
     //Travel pet's array & display on html
-    for(var i=0;i<salon.pets.length;i++){
+    // for(var i=0;i<salon.pets.length;i++){
 
         //assign a price for each service
-    if(salon.pets[i].service == 'Bath, Brush, and Nail Trim'){
-        salon.pets[i].price = 60;
-    }else if(salon.pets[i].service == "Face, Feet, Sanitary" ){
-        salon.pets[i].price = 75;
-    }else if(salon.pets[i].service == "Full Groom" ){
-        salon.pets[i].price = 100;
+    if(aPet.service == 'Bath, Brush, and Nail Trim'){
+        aPet.price = 60;
+    }else if(aPet.service == "Face, Feet, Sanitary" ){
+        aPet.price = 75;
+    }else if(aPet.service == "Full Groom" ){
+        aPet.price = 100;
     }else{
-        salon.pets[i].price = '0 No Service was Selected';
+        aPet.price = '0 No Service was Selected';
     }
         
-        document.getElementById('pet-name').innerHTML+=  `<div class="pet">
-    <h4>${salon.pets[i].name}</h4>
-    <p>Age: ${salon.pets[i].age}</p>
-    <p>Breed: ${salon.pets[i].breed}</p>
-    <p>Gender: ${salon.pets[i].gender}</p>
-    <p>Service: ${salon.pets[i].service}</p>
-    <p>Owner: ${salon.pets[i].ownersName}</p>
-    <p>Phone: ${salon.pets[i].contactNumber}</p>
-    <p>Price: $${salon.pets[i].price}</p>
-    <p>Payment Method: ${salon.pets[i].payment}</p>
-    </div>`;
-    //run profit calc
+    var tmp = `<tr>
+    <td>${aPet.name}</td>
+    <td>${aPet.age}</td>
+    <td>${aPet.breed}</td>
+    <td>${aPet.gender}</td>
+    <td>${aPet.service}</td>
+    <td>${aPet.ownersName}</td>
+    <td>${aPet.contactNumber}</td>
+    <td>$${aPet.price}</td>
+    <td>${aPet.payment}</p></tr>`;
     
+      
+    document.getElementById('pet-name').innerHTML += tmp;
+   
+     //run profit calc
+ profitCalculation();
+ 
 };
 
-   profitCalculation();
     
     
-};
+// };
 
 //use the function
-display();
+        display(scooby);
+        display(scrapy);
+        display(speedy);
+        display(max);
+        display(baxter);
 

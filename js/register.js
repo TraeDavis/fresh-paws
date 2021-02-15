@@ -21,12 +21,15 @@ const salon = {
 /*
     name, age, breed, gender, service, owners name, contact number
 */
+function displayPrices(){
 document.getElementById('prices').innerHTML = 
 `<h4>Prices:</h4>
     <p>The “Bath, Brush, and Nail Trim”: <b>${salon.prices.bathBN}</b></p>
     <p>The “Face, Feet, Sanitary (aka Trim Work)”: <b>${salon.prices.faceFS}</b></p>
     <p>The “Full Groom”: <b>${salon.prices.fullGroom}</b></p>`;
+}
 
+function displayInfo(){
 document.getElementById('first-col').innerHTML = `<p>Hours:<br>
                 Monday - Friday<br>
                 <b>${salon.hours.open}</b> to <b>${salon.hours.close}</b></p>`;
@@ -35,7 +38,7 @@ document.getElementById('mid-col').innerHTML+=`
                 <p>Address:<br>
                  ${salon.address.street}, ${salon.address.number}<br>
                  ${salon.address.city}, ${salon.address.state}</p>`;
-
+}
 
     // create the pet class
     class Pets{
@@ -50,7 +53,7 @@ document.getElementById('mid-col').innerHTML+=`
             this.payment=payment;
             this.price=0;
         }
-    };
+    }
 
 
     // create pets using the constuctor
@@ -60,17 +63,11 @@ document.getElementById('mid-col').innerHTML+=`
     var max= new Pets('Max',3,'German Sheppard','Male', 'Full Groom','Andy','123-454-7878', 'Cash');
     var baxter= new Pets('Baxter',1,'Dalmation','Male','Bath, Brush, and Nail Trim','Karen','434-466-1234', 'Mastercard');
 
-    // push pets made using constructor to the pets array
-    salon.pets.push(scooby);
-    salon.pets.push(scrapy);
-    salon.pets.push(speedy);
-    salon.pets.push(max);
-    salon.pets.push(baxter);
+    
    
    // create register function
    function register(){
         // pull data from form
-
         var txtName = document.getElementById('petNameTxt').value;
         var txtAge = document.getElementById('petAgeTxt').value;
         var txtBreed = document.getElementById('petBreedTxt').value;
@@ -79,6 +76,7 @@ document.getElementById('mid-col').innerHTML+=`
         var txtOwner = document.getElementById('ownerNameTxt').value;
         var txtPhone = document.getElementById('ownerPhoneTxt').value;
         var txtPayment = document.getElementById('paymentTxt').value;
+        
 
         // create generic construtor
         var thePet = new Pets(txtName,txtAge,txtBreed,txtGender,txtService,txtOwner,txtPhone, txtPayment);
@@ -88,13 +86,13 @@ document.getElementById('mid-col').innerHTML+=`
 
         
        // run display function
-        display();
+        display(thePet);
 
         
         //reset form
         document.getElementById("myForm").reset();
         
-   };
+   }
 
 
  
@@ -111,9 +109,27 @@ document.getElementById('mid-col').innerHTML+=`
             document.getElementById('profit').innerHTML = `<p> profit: $${sum}`
    }
   
+function init(){
+    // default
+    console.log('Initialization');
+    // push pets made using constructor to the pets array
+        salon.pets.push(scooby);
+        salon.pets.push(scrapy);
+        salon.pets.push(speedy);
+        salon.pets.push(max);
+        salon.pets.push(baxter);
+        
+        displayInfo();
 
+        displayPrices();
 
+        
+        
+    // hook
+   
+}
 
+window.onload = init();
 
 
 
