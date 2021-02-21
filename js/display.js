@@ -23,7 +23,7 @@ function display(aPet){
         aPet.price = '0 No Service was Selected';
     }
         
-    var tmp = `<tr>
+    var tmp = `<tr id="${aPet.id}">
     <td>${aPet.name}</td>
     <td>${aPet.age}</td>
     <td>${aPet.breed}</td>
@@ -32,7 +32,9 @@ function display(aPet){
     <td>${aPet.ownersName}</td>
     <td>${aPet.contactNumber}</td>
     <td>$${aPet.price}</td>
-    <td>${aPet.payment}</p></tr>`;
+    <td>${aPet.payment}</td>
+    <td><button onclick="deletePet(${aPet.id})">Delete</button></td></tr>
+    `;
     
       
     document.getElementById('pet-name').innerHTML += tmp;
@@ -47,9 +49,9 @@ function display(aPet){
 // };
 
 //use the function
-        display(scooby);
-        display(scrapy);
-        display(speedy);
-        display(max);
-        display(baxter);
+display(scooby);
+display(scrapy);
+display(speedy);
+display(max);
+display(baxter);
 

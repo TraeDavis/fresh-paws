@@ -100,7 +100,12 @@
             <div style="overflow-x:auto;" class="container-fluid table-div">
               <div id="pets"></div>
               <div id="profit"></div>
-              
+              <div>
+                <form action="#" id="mySearch">
+                <input class="form-control" type="text" id="selectSearch" placeholder="Search">
+                </form>
+                <button id="search-btn" onclick="search();">Search</button>
+              </div>
               <table  class="table" id="pet-name">
                 <tr>
                   <th>Pet Name:</th>
@@ -156,9 +161,10 @@
       </footer>
         
       
-       
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="js/register.js"></script>
-      <script src="js/display.js"></script> 
-      <!-- <script src="test/practice1.js"></script> -->
+      <script src="js/display.js"></script>
+      
+      <!-- <script src="test/practice3.js"></script> -->
 </body>
 </html>

@@ -358,8 +358,9 @@ footer{
 
 table, th, td {
     border: 1px solid black;
-    border-collapse: collapse;
+    
   }
+
 #profit{
     display: flex;
     justify-content: center;
@@ -398,9 +399,20 @@ table, th, td {
     font-size: 1.1rem;
     
 }
-
-
-
+.bordered{
+    border: 2px solid red;
+}
+.red-bg{
+    background-color: rgb(184, 70, 93);
+}
+.active-test{
+    border: 2px solid black;
+    background-color: cadetblue;
+}
+.searched{
+    background-color: yellow;
+    
+}
 
 
 
