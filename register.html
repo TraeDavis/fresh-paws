@@ -13,7 +13,7 @@
 </head>
 <body>
   <header class="my-header">
-    <header>
+    
       <nav class="navbar sticky-top  navbar-expand-lg navbar-light bg-light">
         
         <p class="navbar-brand" id="logo">
@@ -25,6 +25,30 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="mobile-nav">
+              
+          <ul class="nav flex-column">
+            <li class="nav-item active">
+                <a class="nav-link " href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="register.html">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+              <div class="exit-container"> 
+                  <button id="exit"><i class="far fa-times-circle"></i></button>
+              </div><!--.exit-->
+              
+        </div><!--.mobile-nav-->
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="seperate">
@@ -41,7 +65,9 @@
             <li class="nav-item">
               <a class="nav-link active" href="register.html">Register</a>
             </li>
-            
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -91,20 +117,25 @@
                   <option value="Apple Pay">Apple Pay</option>
                   <option value="Bitcoin">Bitcoin</option>
                 </select><br>
-                
-                <button class="btn-dark"  onclick="register()">Register</button>
+                <div class="btn-container">
+                <button class="btn-dark btn-lg" id="register-btn" >Register</button>
+              </div><!--.btn-container-->
               </form>
+              <div class="successfull-submit">
+                <p class="text-center">Your pet has been successfully registered in the table below.<br>
+                 Thank you for your business!! </p>
+              </div>
               
             </div><!--.col-sm-->
 
             <div style="overflow-x:auto;" class="container-fluid table-div">
               <div id="pets"></div>
               <div id="profit"></div>
-              <div>
+              <div class="search-form">
                 <form action="#" id="mySearch">
-                <input class="form-control" type="text" id="selectSearch" placeholder="Search">
+                <input class="form-control mb-3" type="text" id="selectSearch" placeholder="Search by name or service">
                 </form>
-                <button id="search-btn" onclick="search();">Search</button>
+                <button class="btn-dark"id="search-btn">Search</button>
               </div>
               <table  class="table" id="pet-name">
                 <tr>
@@ -165,6 +196,6 @@
       <script src="js/register.js"></script>
       <script src="js/display.js"></script>
       
-      <!-- <script src="test/practice3.js"></script> -->
+    
 </body>
 </html>

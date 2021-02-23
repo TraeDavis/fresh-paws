@@ -23,6 +23,32 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <div class="mobile-nav">
+              
+          <ul class="nav flex-column">
+            <li class="nav-item active">
+                <a class="nav-link " href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+              <div class="exit-container"> 
+                  <button id="exit"><i class="far fa-times-circle"></i></button>
+              </div><!--.exit-->
+              
+        </div><!--.mobile-nav-->
+
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
@@ -37,7 +63,9 @@
             <li class="nav-item">
               <a class="nav-link" href="register.html">Register</a>
             </li>
-            
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -45,12 +73,106 @@
 
   </header>
     <main>
-      <img src="img/maintenance-2422171_1920.jpg" class="img-fluid" alt="...">
+      <div class="services-navhead">
+      <h4 class='btn-color'>Select a service below to learn more</h4>
+      <ul class="nav nav-tabs nav-fill">
+        
+        <li class="nav-item">
+          <a class='btn-color nav-link' id="bath-btn" href="#">Bath, Brush, and Nail Trim</a>
+        </li>
+        <li class="nav-item">
+          <a class='btn-color nav-link' id="face-btn" href="#">Face, Feet, Sanitary</a>
+        </li>
+        <li class="nav-item">
+          <a class='btn-color nav-link' id="full-btn" href="#">Full Groom</a>
+        </li>
+      </ul>
+     </div>
+      
 
+      <main class="services-bg">  
+        <div>
+        <h2 class="text-center">Services</h2>
+      </div>
+        <div class="container serv-container">
+          <div class="row">
+            <div id="bath" class="col-sm">
+              <div class="card mb-3" style="width: 18rem;">
+                <img src="/img/dog-paw-1102125_1920.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">The “Bath, Brush, and Nail Trim”</h4>
+                  <p class="card-text text-center">
+                    <b>Price: $60</b></p>
+                    <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo et doloremque expedita eaque voluptatibus repellendus libero eos, impedit magnam ipsum modi ipsam rem eum, cupiditate dicta a, dignissimos asperiores suscipit.</p>
+                  
+                </div><!--.card-body-->
+              </div><!--.card mb-3-->
+            </div><!--.col-sm-->
+            <div id="face" class="col-sm">
+              <div class="card mb-3" style="width: 18rem;">
+                <img src="/img/adorable-3344414_1920.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">The “Face, Feet, Sanitary (aka Trim Work)”</h4>
+                  <p class="card-text text-center">
+                    <b>Price: $75</b></p>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores aperiam fugiat consectetur? Veritatis nihil soluta ipsa quod? Quibusdam fuga nulla nihil culpa, ad expedita, id maxime ducimus ullam deleniti accusamus.</p>
+                </div><!--.card-body-->
+              </div><!--.card mb-3-->
+            </div><!--.col-sm-->
+            <div id="full" class="col-sm">
+              <div class="card mb-3" style="width: 18rem;">
+                <img src="/img/dog-2088424_1920.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">The “Full Groom”</h4>
+                  <p class="card-text text-center">
+                    <b>Price: $100</b></p>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum officia, perspiciatis dolores hic voluptatem. Itaque sint recusandae culpa quos nihil ratione, laboriosam natus voluptates maxime asperiores facere explicabo adipisci!</p>
+                  
+                </div><!--.card-body-->
+              </div><!--.card mb-3-->
+            </div><!--.col-sm-->
+          </div><!--.row-->
+        </div><!--.container .serv-container-->
     </main>
 
+    <footer id="footer-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm icon-container" id="first-col">
+            
+          </div>
     
+          <div class="col-sm icon-container" id="mid-col">
+            <p class="navbar-brand" id="logo">
+              <i class="fas fa-paw" id="dirty-paw"></i>
+              <span>Fresh</span> <orange>Paws</orange>
+              <i class="fas fa-paw" id="clean-paw"></i>
+            </p>
+            <!--for js input-->
+          </div>
+    
+          <div class="col-sm icon-container">
+            <h6>Follow Us On Social Media:</h6>
+            <div class="btn-container">
+              <button type="button" class="btn btn-outline-primary"><i class="fab fa-facebook"></i></button>
+    
+              <button type="button" class="btn btn-outline-primary"><i class="fab fa-twitter"></i></button>
+    
+              <button type="button" class="btn btn-outline-primary"><i class="fab fa-google-plus"></i></button>
+            </div><!--.btn-container-->
+    
+          </div><!--.col-sm icon-container-->
+        </div><!--.row-->
+      </div><!--.container-->
+      
+    
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="js/script.js"></script>
-      <script src="js/construction.js"></script>
+      <script src="js/service.js"></script>
 </body>
 </html>

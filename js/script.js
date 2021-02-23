@@ -26,14 +26,21 @@ document.getElementById('mid-col').innerHTML+=`
      ${salon.address.street}, ${salon.address.number}<br>
      ${salon.address.city}, ${salon.address.state}</p>`;
 
-// var hours = `</p>
-// <p>Hours:<br>  Monday - Friday:<br> <b>${salon.hours.open}</b> to <b>${salon.hours.close}</b></p>`;
-// var doc = document.createTextNode(hours);
-// var element = document.getElementById('first-col');
-// element.appendChild(doc);
+
 
 
 
 document.getElementById('first-col').innerHTML = `<p>Hours:<br>
                 Monday - Friday<br>
                 <b>${salon.hours.open}</b> to <b>${salon.hours.close}</b></p>`;
+
+$('.mobile-nav').hide();
+
+$('#exit').on('click', function(){
+    $('.mobile-nav').fadeOut(500);
+});
+
+$('.navbar-toggler').on('click', function(){
+    $('.mobile-nav').fadeIn(500);
+});
+

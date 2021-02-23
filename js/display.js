@@ -33,7 +33,7 @@ function display(aPet){
     <td>${aPet.contactNumber}</td>
     <td>$${aPet.price}</td>
     <td>${aPet.payment}</td>
-    <td><button onclick="deletePet(${aPet.id})">Delete</button></td></tr>
+    <td><button class="btn-danger" onclick="deletePet(${aPet.id})">Delete</button></td></tr>
     `;
     
       
@@ -46,7 +46,15 @@ function display(aPet){
 
     
     
-// };
+$('.mobile-nav').hide();
+
+$('#exit').on('click', function(){
+    $('.mobile-nav').fadeOut(500);
+});
+
+$('.navbar-toggler').on('click', function(){
+    $('.mobile-nav').fadeIn(500);
+});
 
 //use the function
 display(scooby);

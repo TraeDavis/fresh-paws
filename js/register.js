@@ -92,6 +92,9 @@ document.getElementById('mid-col').innerHTML+=`
         
         //reset form
         document.getElementById("myForm").reset();
+
+        // run animation for successfull register
+        $('.successfull-submit').fadeIn(1000).fadeOut(5000);
         
    }
 
@@ -138,17 +141,15 @@ function deletePet(petId){
 
 
 function search(){
-    var searchResult = document.getElementById('selectSearch').value.toLowerCase();
-    
-    console.log(searchResult);
+    var searchResult = $('#selectSearch').val().toLowerCase();
     
     // hightlight pet that was searched for
-    for(var i=0; i<salon.pets.length; i++){     var lowerResult = salon.pets[i].name.toLowerCase();
+    for(var i=0; i<salon.pets.length; i++){     var result = salon.pets[i];
         
-        if( searchResult === lowerResult){
-           $('#'+ salon.pets[i].id).addClass('searched');
+        if( result.name.toLowerCase().includes(searchResult) || result.service.toLowerCase().includes(searchResult) ){
+           $('#'+ result.id).show();
         }else{
-            console.log('That pet is not registered.');
+            $('#'+ result.id).hide();
         }
     }
 
@@ -170,9 +171,22 @@ function init(){
 
         displayPrices();
 
+        // hide success message
+        $('.successfull-submit').hide();
         
-        
-    // hook
+    // hook events
+    // event for register
+    $('#register-btn').on('click', register);
+    // event for search
+    $('#search-btn').on('click', search);
+
+    $('#selectSearch').keypress(function(e){
+        console.log(e.key);
+        if(e.key==="Enter"){
+            search();
+            return false;
+        }
+    });
    
 }
 
